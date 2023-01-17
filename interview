@@ -1,0 +1,25 @@
+1. 求最⼤公约数和最⼩公倍数
+两个数的最⼤公约数是两个数的公共因⼦中最⼤的那个数；两个数的最⼩公倍数则是能够同时
+被两个数整除的最⼩的那个数。
+
+输⼊：（120和60是通过键盘输⼊的）
+x = 120
+y = 60
+
+答案：
+
+x = 1 int(input('x = '))
+y = int(input('y = '))
+3 # 如果x大于y就交换x和y的值
+if x > y:
+5 # 通过下面的操作将y的值赋给x, 将x的值赋给y
+  temp = y
+  y = x
+  x = temp
+  # 从两个数中较的数开始做递减的循环
+for factor in range(x, 0, -1):
+  if x % factor == 0 and y % factor == 0:
+  print('{}和{}的最大公约数是：{}' .format(x, y, factor))
+  print('{}和{}的最小公倍数是：{}' .format(x, y, x * y // factor))
+break
+
